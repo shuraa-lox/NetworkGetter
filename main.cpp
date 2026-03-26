@@ -56,6 +56,8 @@ int main(){
    			}else{
    				cout << "There is no password on the \"" << name << "\" network." << endl;
    			}
+
+   			system("pause");
    		}
    		
     } catch (const fs::filesystem_error& e) {
